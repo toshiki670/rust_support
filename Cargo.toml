@@ -1,0 +1,33 @@
+[package]
+name = "rust_support"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ['anyhow', 'glob']
+anyhow = []
+glob = []
+
+test = ['assert']
+assert = ['pretty_assertions']
+
+[dependencies]
+anyhow = { workspace = true }
+futures = { workspace = true }
+glob = { workspace = true }
+pretty_assertions = { workspace = true, optional = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+
+[dev-dependencies]
+pretty_assertions = { workspace = true }
+tempfile = { workspace = true }
+
+[workspace.dependencies]
+anyhow = "1.0.96"
+futures = "0.3"
+glob = "0.3.2"
+pretty_assertions = "1.4.1"
+tempfile = "3.16.0"
+thiserror = "2.0.11"
+tokio = { version = "1.43.0", features = ["full"] }
