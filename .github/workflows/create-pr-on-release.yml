@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      RELEASE_VERSION: null
+      GH_TOKEN: ${{ secrets.CREATE_PR_TOKEN }}
 
     steps:
       - uses: actions/checkout@v4
