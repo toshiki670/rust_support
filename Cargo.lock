@@ -334,7 +334,7 @@ dependencies = [
 
 [[package]]
 name = "rust_support"
-version = "0.0.1-rc.3"
+version = "0.0.1-rc.4"
 dependencies = [
  "anyhow",
  "futures",
