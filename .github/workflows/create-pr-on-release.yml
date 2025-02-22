@@ -20,6 +20,7 @@ jobs:
         run: |
           VERSION=$(cargo pkgid | awk -F# '{print $2}')
           echo "release_version=${VERSION}" >> $GITHUB_OUTPUT
+          echo ${{ steps }}
 
       - name: Check PullRequest Exists
         id: check_pr
