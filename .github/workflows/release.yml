@@ -18,6 +18,15 @@ jobs:
       - name: Build
         run: cargo build --release
 
+      - name: Check if the release is a beta, rc, or alpha
+        id: is_prerelease
+        run: |
+          if [[ ${{ github.head_ref }} == *"rc"* || ${{ github.head_ref }} == *"beta"* || ${{ github.head_ref }} == *"alpha"* ]]; then
+            echo "bool=true" >> $GITHUB_OUTPUT
+          else
+            echo "bool=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
@@ -26,3 +35,4 @@ jobs:
           tag_name: ${{ github.event.pull_request.title }}
           generate_release_notes: true
           token: ${{ secrets.CREATE_PR_TOKEN }}
+          prerelease: ${{ steps.is_prerelease.outputs.bool }}
