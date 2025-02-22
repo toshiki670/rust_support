@@ -37,4 +37,4 @@ jobs:
             -B main \
             -t 'v${{ steps.get_version.outputs.release_version }}' \
             -a ${{ github.actor }} \
-            -b 'v${{ steps.check_pr.outputs.message }}'
+            -b '${{ steps.check_pr.outputs.message }}'
