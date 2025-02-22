@@ -1,10 +1,9 @@
 [package]
 name = "rust_support"
-version = "0.0.1-rc.6"
+version = "0.1.0"
 edition = "2021"
 authors = ["Toshiki"]
 description = "A collection of utilities for Rust"
-license = "MIT"
 license-file = "LICENSE"
 repository = "https://github.com/toshiki670/rust_support"
 exclude = [".github", ".gitignore", "Makefile.toml"]
