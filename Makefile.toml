@@ -86,10 +86,10 @@ category = "Release"
 script = ['''
 cargo release version --execute --no-confirm alpha
 new_version=$(cargo pkgid | sed 's/.*#//')
-git switch -c "v${new_version}"
+git switch -c "release/v${new_version}"
 git add .
 git commit -m "Bump version to ${new_version}"
-git push origin "v${new_version}"
+git push origin "release/v${new_version}"
 '''
 ]
 
@@ -99,10 +99,10 @@ category = "Release"
 script = ['''
 cargo release version --execute --no-confirm beta
 new_version=$(cargo pkgid | sed 's/.*#//')
-git switch -c "v${new_version}"
+git switch -c "release/v${new_version}"
 git add .
 git commit -m "Bump version to ${new_version}"
-git push origin "v${new_version}"
+git push origin "release/v${new_version}"
 '''
 ]
 
@@ -112,10 +112,10 @@ category = "Release"
 script = ['''
 cargo release version --execute --no-confirm rc
 new_version=$(cargo pkgid | sed 's/.*#//')
-git switch -c "v${new_version}"
+git switch -c "release/v${new_version}"
 git add .
 git commit -m "Bump version to ${new_version}"
-git push origin "v${new_version}"
+git push origin "release/v${new_version}"
 '''
 ]
 
@@ -125,10 +125,10 @@ category = "Release"
 script = ['''
 cargo release version --execute --no-confirm patch
 new_version=$(cargo pkgid | sed 's/.*#//')
-git switch -c "v${new_version}"
+git switch -c "release/v${new_version}"
 git add .
 git commit -m "Bump version to ${new_version}"
-git push origin "v${new_version}"
+git push origin "release/v${new_version}"
 '''
 ]
 
@@ -138,10 +138,10 @@ category = "Release"
 script = ['''
 cargo release version --execute --no-confirm minor
 new_version=$(cargo pkgid | sed 's/.*#//')
-git switch -c "v${new_version}"
+git switch -c "release/v${new_version}"
 git add .
 git commit -m "Bump version to ${new_version}"
-git push origin "v${new_version}"
+git push origin "release/v${new_version}"
 '''
 ]
 
@@ -151,10 +151,10 @@ category = "Release"
 script = ['''
 cargo release version --execute --no-confirm major
 new_version=$(cargo pkgid | sed 's/.*#//')
-git switch -c "v${new_version}"
+git switch -c "release/v${new_version}"
 git add .
 git commit -m "Bump version to ${new_version}"
-git push origin "v${new_version}"
+git push origin "release/v${new_version}"
 '''
 ]
 
