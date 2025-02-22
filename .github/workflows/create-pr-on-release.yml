@@ -30,7 +30,7 @@ jobs:
           COMMIT_MESSAGE=$(echo "${HEAD_MESSAGE}" | sed -n -e 1p)
           echo "message=${COMMIT_MESSAGE}"
           echo "message=${COMMIT_MESSAGE}" >> "$GITHUB_OUTPUT"
-          COUNT=$(gh pr list -S 'v${{ steps.get_version.outputs.release_version }}'in:title | wc -l)
+          COUNT=$(gh pr list --state open -S 'head:${{ github.head_ref }}' | wc -l)
           echo "count=${COUNT}"
           echo "count=${COUNT}" >> "$GITHUB_OUTPUT"
       - name: Create Release Pull Request
