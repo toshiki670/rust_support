@@ -37,4 +37,5 @@ jobs:
           gh pr create \
             -B main \
             -t 'v${{ steps.get_version.outputs.release_version }}' \
-            -a ${{ github.actor }}
+            -a ${{ github.actor }} \
+            -b 'v${{ steps.check_pr.outputs.message }}'
