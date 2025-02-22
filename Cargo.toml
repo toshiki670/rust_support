@@ -1,7 +1,13 @@
 [package]
 name = "rust_support"
-version = "0.0.1-rc.5"
+version = "0.0.1-rc.6"
 edition = "2021"
+authors = ["Toshiki"]
+description = "A collection of utilities for Rust"
+license = "MIT"
+license-file = "LICENSE"
+repository = "https://github.com/toshiki670/rust_support"
+exclude = [".github", ".gitignore", "Makefile.toml"]
 
 [features]
 default = ['anyhow', 'glob']
