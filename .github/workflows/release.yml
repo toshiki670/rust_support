@@ -10,6 +10,10 @@ jobs:
   release:
     name: Create release
     runs-on: ubuntu-latest
+
+    env:
+      GH_TOKEN: ${{ secrets.CREATE_PR_TOKEN }}
+
     if: contains(github.head_ref, 'release/')
     steps:
       - uses: actions/checkout@v4
