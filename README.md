@@ -9,3 +9,12 @@
 ## Overview
 
 Providing convenient and useful methods in Rust
+
+## Feature flags
+
+- **default**: Includes the `anyhow` and `glob` features.
+- **anyhow**: Enables the use of the `anyhow` crate for error handling.
+- **glob**: Enables the use of the `glob` crate for pattern matching.
+
+- **test**: Includes the `assert` feature.
+- **assert**: Enables the use of the `pretty_assertions` crate for improved assertion messages during testing.
