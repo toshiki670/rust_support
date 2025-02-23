@@ -1,6 +1,6 @@
 [package]
 name = "rust_support"
-version = "0.1.1-rc.1"
+version = "0.1.1"
 edition = "2024"
 authors = ["Toshiki"]
 description = "A collection of utilities for Rust"
