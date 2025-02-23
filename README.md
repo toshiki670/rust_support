@@ -1,6 +1,5 @@
 # rust_support
 
-![GitHub Release](https://img.shields.io/github/v/release/toshiki670/rust_support)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/toshiki670/rust_support/rust.yml)
 ![Crates.io License](https://img.shields.io/crates/l/rust_support)
 ![Crates.io Size](https://img.shields.io/crates/size/rust_support)
