@@ -20,6 +20,9 @@ jobs:
         with:
           toolchain: stable
 
+      - name: Generate lockfile
+        run: cargo generate-lockfile
+
       - name: Get the version
         id: get_version
         run: |
