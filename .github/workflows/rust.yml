@@ -27,6 +27,8 @@ jobs:
           toolchain: stable
       - name: Install cargo-outdated
         run: cargo install cargo-outdated
+      - name: Generate lockfile
+        run: cargo generate-lockfile
       - name: Check dependencies (capture outdated list)
         id: outdated
         continue-on-error: true
@@ -73,12 +75,15 @@ jobs:
         with:
           toolchain: stable
           components: clippy
+      - name: Generate lockfile
+        run: cargo generate-lockfile
       - name: Check lint
         uses: giraffate/clippy-action@v1
         with:
           clippy_flags: --all-targets --all-features -- -D warnings
           reporter: "github-pr-review"
           fail_on_error: true
+
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -89,5 +94,7 @@ jobs:
         uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable
+      - name: Generate lockfile
+        run: cargo generate-lockfile
       - name: Run tests
         run: cargo test --workspace --verbose
